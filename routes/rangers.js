@@ -17,7 +17,8 @@ router.get('/', (req, res) => {
 
 router.get('/:slug', (req, res) => {
     const { slug } = req.params;
-    const ranger = rangersModel.find((ranger => ranger.slug === slug)
+    const ranger = rangersModel.find((ranger => ranger.slug === slug))
+
     if (ranger) {
         res.render('template', {
             locals: {
@@ -29,7 +30,8 @@ router.get('/:slug', (req, res) => {
             },
         });
     } else {
-        res.status(404).send(`No Ranger found that matches slug, ${slug}`);
+        res.status(404).send(`No Ranger found that matches slug, ${slug}`)
     }
+    
 
 });
