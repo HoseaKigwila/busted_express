@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
             data: 'rangersModel'
         },
         partials: {
-            body: 'partials/ranger-list',
+            body: 'partials/ranger-list'
         },
     });
 });
