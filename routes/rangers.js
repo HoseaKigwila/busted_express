@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     res.render('template', {
         locals: {
             title: 'List of Power Rangers',
-            data: rangersModel
+            data: 'rangersModel'
         },
         partials: {
             body: 'partials/ranger-list',
@@ -26,7 +26,7 @@ router.get('/:slug', (req, res) => {
                 ranger
             },
             partials: {
-                body: 'partials/ranger-details',
+                body: 'partials/ranger-details'
             },
         });
     } else {
