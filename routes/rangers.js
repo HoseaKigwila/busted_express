@@ -1,7 +1,7 @@
-const express = require('express');
+const express = Require('express');
 const router = express.Router();
 
-const rangersModel = require('./db');
+const rangersModel = Require('./db');
 
 router.get('/', (req, res) => {
     res.render('template', {
