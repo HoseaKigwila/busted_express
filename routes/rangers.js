@@ -1,5 +1,5 @@
-const express = Require('express');
-const router = express.Router();
+const express = require('express');
+const router = express.router();
 
 const rangersModel = Require('./db');
 
