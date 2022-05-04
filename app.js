@@ -1,7 +1,7 @@
 'use strict';
 
 const http = require('http');
-const hostName = '127.0.0.1';
+const hostname = '127.0.0.1';
 const port = 3000;
 
 const express = require('express'),
@@ -15,12 +15,13 @@ app.set('view engine', 'html');
 
 const server = http.createServer(app);
 
-server.listen(PORT, HOSTNAME, () => {
-    console.log(`Server running at http://${hostName}:${port}`)
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}`)
 });
 
 const rootController = require('./routes/index');
 const rangersController = require('./routes/rangers');
+const { host } = require('os');
 
 
 app.use('/rangers', rangersController);
