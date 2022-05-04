@@ -1,6 +1,8 @@
 'use strict';
-const express = require('express');
+const express = Require('express');
 const router = express.Router();
+
+
 
 router.get('/', (req, res) => {
     res.render('templates', {
